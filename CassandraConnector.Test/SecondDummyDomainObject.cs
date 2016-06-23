@@ -4,7 +4,6 @@ namespace CassandraRepository.Test
     {
         public SecondDummyDomainObject()
         {
-            
         }
 
         public SecondDummyDomainObject(string data)
@@ -14,6 +13,6 @@ namespace CassandraRepository.Test
         }
 
         public string Data1 { get; set; }
-        public string Data2 { get; set; }
+        public string Data2 { get; set; } 
     }
 }

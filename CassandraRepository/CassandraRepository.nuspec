@@ -1,0 +1,21 @@
+﻿<?xml version="1.0"?>
+<package >
+  <metadata>
+    <id>Cassandra.Repository</id>
+    <version>$version$</version>
+    <title>Cassandra Repository</title>
+    <authors>Matt</authors>
+    <owners>Matt</owners>
+    <licenseUrl>https://github.com/</licenseUrl>
+    <projectUrl>https://github.com/</projectUrl>
+    <iconUrl>https://github.com/</iconUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>Cassandra repo</description>
+    <releaseNotes></releaseNotes>
+    <copyright></copyright>
+    <tags></tags>
+  </metadata>
+  <files>
+	<file src="CassandraRepository\bin\$configuration$\CassandraRepository.dll" target="lib\net40\" />
+  </files>
+</package>
