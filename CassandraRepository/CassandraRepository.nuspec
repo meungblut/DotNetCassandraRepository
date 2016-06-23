@@ -16,6 +16,6 @@
     <tags></tags>
   </metadata>
   <files>
-	<file src="CassandraRepository\bin\$configuration$\CassandraRepository.dll" target="lib\net40\" />
+	<file src="\bin\$configuration$\CassandraRepository.dll" target="lib\net40\" />
   </files>
 </package>
