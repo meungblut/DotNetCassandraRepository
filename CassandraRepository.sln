@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25123.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CassandraRepository.Test", "CassandraConnector.Test\CassandraRepository.Test.csproj", "{09AFFEA9-1384-4B8B-96AB-A3CA3BB2CCDB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CassandraRepository", "CassandraRepository\CassandraRepository.csproj", "{43BC5F19-DAC9-4050-BDD2-78B7154D69EC}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{09AFFEA9-1384-4B8B-96AB-A3CA3BB2CCDB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{09AFFEA9-1384-4B8B-96AB-A3CA3BB2CCDB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{09AFFEA9-1384-4B8B-96AB-A3CA3BB2CCDB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{09AFFEA9-1384-4B8B-96AB-A3CA3BB2CCDB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{43BC5F19-DAC9-4050-BDD2-78B7154D69EC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{43BC5F19-DAC9-4050-BDD2-78B7154D69EC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{43BC5F19-DAC9-4050-BDD2-78B7154D69EC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{43BC5F19-DAC9-4050-BDD2-78B7154D69EC}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
