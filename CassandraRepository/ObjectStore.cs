@@ -35,7 +35,7 @@ namespace CassandraRepository
             _readMultipleMessages = _sessionFactory.GetSession().Prepare(ReadMultipleCqlStatement);
         }
 
-        public async Task Save(Guid entityId, Guid entryId, object domainObject, ConsistencyLevel level)
+        public async Task Save(string entityId, string entryId, object domainObject, ConsistencyLevel level)
         {
             var typeInformation = domainObject.GetType().AssemblyQualifiedName;
 
@@ -43,16 +43,16 @@ namespace CassandraRepository
             var serialisedDate = serializer.PackSingleObject(domainObject);
 
             var statement =
-                _writeMessage.Bind(entityId.ToString(), entryId.ToString(), typeInformation, serialisedDate)
+                _writeMessage.Bind(entityId, entryId, typeInformation, serialisedDate)
                 .SetConsistencyLevel(level);
 
             await _sessionFactory.GetSession().ExecuteAsync(statement);
         }
 
-        public async Task<object> Get(Guid entryId, ConsistencyLevel consistency)
+        public async Task<object> Get(string entryId, ConsistencyLevel consistency)
         {
             var readSingleMessage =
-                _readSingleMessage.Bind(entryId.ToString()).SetConsistencyLevel(consistency);
+                _readSingleMessage.Bind(entryId).SetConsistencyLevel(consistency);
 
             var lastSequenceRows = await _sessionFactory.GetSession().ExecuteAsync(readSingleMessage);
 
@@ -62,10 +62,10 @@ namespace CassandraRepository
             return deserialisedData;
         }
 
-        public async Task<IEnumerable<object>> GetAll(Guid entityId, ConsistencyLevel consistency)
+        public async Task<IEnumerable<object>> GetAll(string entityId, ConsistencyLevel consistency)
         {
             var readMultipleMessagesStatement =
-                _readMultipleMessages.Bind(entityId.ToString()).SetConsistencyLevel(consistency);
+                _readMultipleMessages.Bind(entityId).SetConsistencyLevel(consistency);
 
             var lastSequenceRows = await _sessionFactory.GetSession().ExecuteAsync(readMultipleMessagesStatement);
 

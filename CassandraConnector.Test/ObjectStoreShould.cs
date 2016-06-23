@@ -11,7 +11,7 @@ namespace CassandraRepository.Test
         private ClusterConfiguration config;
         private SingletonCassandraSessionFactory sessionFactory;
         private ObjectStore _objectStore;
-        private Guid _entityId;
+        private string _entityId;
 
         [SetUp]
         public void ConfigureCluster()
@@ -21,14 +21,14 @@ namespace CassandraRepository.Test
             CreateKeyspaceAndTable();
             _objectStore = new ObjectStore(sessionFactory);
 
-            _entityId = Guid.NewGuid();
+            _entityId = Guid.NewGuid().ToString();
         }
 
         [Test]
         public async Task AllowSavingAndRetrievingOfObjectsByEntryId()
         {
             var domainObject = new DummyDomainObject(Guid.NewGuid().ToString());
-            var entryId = Guid.NewGuid();
+            var entryId = Guid.NewGuid().ToString();
 
             await _objectStore.Save(_entityId, entryId, domainObject, ConsistencyLevel.Any);
 
@@ -67,7 +67,7 @@ namespace CassandraRepository.Test
         private async Task SaveItem1()
         {
             var domainObject = new DummyDomainObject(Guid.NewGuid().ToString());
-            var entryId = Guid.NewGuid();
+            var entryId = Guid.NewGuid().ToString();
 
             await _objectStore.Save(_entityId, entryId, domainObject, ConsistencyLevel.Any);
         }
@@ -75,7 +75,7 @@ namespace CassandraRepository.Test
         private async Task SaveItem2()
         {
             var domainObject = new SecondDummyDomainObject(Guid.NewGuid().ToString());
-            var entryId = Guid.NewGuid();
+            var entryId = Guid.NewGuid().ToString();
 
             await _objectStore.Save(_entityId, entryId, domainObject, ConsistencyLevel.Any);
         }
