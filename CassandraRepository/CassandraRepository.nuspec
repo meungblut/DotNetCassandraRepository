@@ -12,6 +12,5 @@
   </metadata>
   <files>
     <file src="bin\$configuration$\$id$.pdb" target="lib\net461\" />
-    <file src="bin\$configuration$\possum.eventing.pdb" target="lib\net461\" />
   </files>
 </package>
