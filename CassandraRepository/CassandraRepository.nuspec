@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0"?>
 <package >
   <metadata>
-    <id>$id$</id>
+    <!--<id>$id$</id>-->
     <version>$version$</version>
     <title>Cassandra Repository</title>
     <authors>Matt</authors>
