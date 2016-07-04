@@ -1,5 +1,4 @@
 using System;
-using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -20,7 +19,7 @@ namespace CassandraRepository
                 VALUES(?, ?, ?, ?)";
 
         private static string ReadSingleCqlStatement =
-                @"SELECT message_type, message from Repository.Items
+                @"SELECT message_type, message from Repository.Items        
                   WHERE message_id = ?";
 
         private static string ReadMultipleCqlStatement =

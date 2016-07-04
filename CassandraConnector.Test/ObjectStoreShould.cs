@@ -16,7 +16,7 @@ namespace CassandraRepository.Test
         [SetUp]
         public void ConfigureCluster()
         {
-            config = new ClusterConfiguration("cassandra", "cassandra", "192.168.99.100", 32896);
+            config = new ClusterConfiguration("cassandra", "cassandra", "192.168.99.100", 32769);
             sessionFactory = new SingletonCassandraSessionFactory(config);
             CreateKeyspaceAndTable();
             _objectStore = new ObjectStore(sessionFactory);
